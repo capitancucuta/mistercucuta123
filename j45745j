@@ -1,0 +1,12 @@
+micromamba run -n foundationpose \
+  python examples/vision_baseline/04_fp_start_server.py \
+  --bridge-dir data/foundationpose_bridge/ioai_sim_scene \
+  --foundationpose-dir /opt/FoundationPose
+
+Run the Store Pipeline:
+
+Bash
+python 08_store_challenge_pipeline.py \
+  --table-layout outputs/ioai_table_layout.yaml \
+  --policy-manifest outputs/ioai_policy_baseline.yaml \
+  --yolo-model playground/Checkpoints/g1_ioaisimscene_pick_v0_front_head_rgb_camera/weights/best.pt
